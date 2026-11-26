@@ -1,0 +1,4 @@
+@echo off
+cd /d "%~dp0"
+powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0launch\run.ps1" -Brain
+pause

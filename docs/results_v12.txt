@@ -1,0 +1,45 @@
+================  PARADOX v12 vs HEGELION on Qwen 3.8 27B  ================
+
+Paradox vs hegelion  (20 prompts, judge: openai/gpt-oss-120b)
+  criterion           paradox  hegelion    tie
+  steelman                  6         6      8
+  crux                     10         4      6
+  beyond_compromise         0        14      6
+  honesty                   8         3      9
+  consistency               0         1     19
+  economy                  18         0      2
+  insight                   4        10      6
+  overall                   7         8      5
+  paradox   self-contradiction 0.97   mush 0.76   words 684
+  hegelion  self-contradiction 0.99   mush 0.94   words 1364
+
+Paradox vs plain  (20 prompts, judge: openai/gpt-oss-120b)
+  criterion           paradox     plain    tie
+  steelman                  5         8      7
+  crux                      9         2      9
+  beyond_compromise        12         0      8
+  honesty                   8         1     11
+  consistency               0         0     20
+  economy                   0         4     16
+  insight                   6         1     13
+  overall                   8         4      8
+  paradox   self-contradiction 0.97   mush 0.76   words 684
+  plain     self-contradiction 0.80   mush 0.52   words 570
+
+Cost per prompt
+  paradox     4.2 calls     342s
+  plain       1.0 calls      54s
+  hegelion    3.0 calls     369s
+
+Contradiction resolution  (15 cases with known right outcomes)
+  paradox right  13/15
+  plain right    10/15
+    different conditions      paradox 8/8   plain 6/8
+    genuine contradiction     paradox 2/4   plain 4/4
+    insufficient information  paradox 3/3   plain 0/3
+
+Whole reports  (3 PDF pairs with known right outcomes)
+  paradox right  3/3
+    welding      right: different conditions     paradox: different conditions
+    min_wage     right: genuine contradiction    paradox: genuine contradiction
+    remote       right: different conditions     paradox: different conditions

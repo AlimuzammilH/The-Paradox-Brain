@@ -1,0 +1,34 @@
+================  PARADOX v13 on Qwen 3.8 27B  ================
+
+Paradox vs hegelion  (2 prompts, judge: openai/gpt-oss-120b)
+  criterion           paradox  hegelion    tie
+  steelman                  1         1      0
+  crux                      1         1      0
+  beyond_compromise         0         2      0
+  honesty                   0         0      2
+  consistency               0         1      1
+  economy                   1         0      1
+  insight                   0         2      0
+  overall                   0         1      1
+  paradox   self-contradiction 0.89   mush 0.60   words 856
+  hegelion  self-contradiction 1.00   mush 0.99   words 1368
+
+Paradox vs plain  (11 prompts, judge: openai/gpt-oss-120b)
+  criterion           paradox     plain    tie
+  steelman                  3         3      5
+  crux                      5         1      5
+  beyond_compromise         8         2      1
+  honesty                   2         2      7
+  consistency               0         1     10
+  economy                   0         6      5
+  insight                   3         3      5
+  overall                   4         3      4
+  paradox   self-contradiction 0.94   mush 0.83   words 825
+  plain     self-contradiction 0.93   mush 0.50   words 584
+
+Cost per prompt
+  paradox     5.0 calls     302s
+  plain       1.0 calls      54s
+  hegelion    3.0 calls     369s
+No conflict cases scored yet.
+
